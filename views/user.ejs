@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cтраница <%= username %></title>
+    <link rel="stylesheet" href="/css/user.css">
+</head>
+<body>
+    <%- include("block/header") -%>
+
+    <div class="about-user"> 
+        <h2>Страница пользователя: <%= username %></h2>
+    </div>
+
+    <div class="hobby-max">
+        <% if(username == "Max") { %>
+                <h3>Хобби:</h3>
+            <% hobby.forEach((el) => { %>
+                <span><%= el %></span>
+            <% }) %>
+        <% } %>
+    </div>
+</body>
+</html>
